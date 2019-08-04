@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<audio id="audiotag1" src="alerta.mp3" preload="auto"></audio>
+	<div id="notification" onclick="play_single_sound(event);">Ok</div>
+
+
+	<script type="text/javascript" src="../jquery/jquery-1.9.1.min.js"></script>
+
+    <script type="text/javascript">
+    	$( "#notification" ).trigger( "click" );
+
+    	function play_single_sound(event){
+    		console.log(event);
+    		console.log("ok si pasa");
+    		document.getElementById('audiotag1').play();
+    	}
+
+    	// $('a').click(function(event){
+    	// 	console.log("ok ok");
+    	// 	console.log(event);
+    	// })
+
+
+    </script>
+</body>
+</html>

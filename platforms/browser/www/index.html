@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+        <!-- <link rel="stylesheet" type="text/css" href="css/buttons.css" /> -->
+        <title>PhoneGap Day Wikitude AR Demo</title>
+
+
+        <style type="text/css">
+            .app{
+                /* background: url(../img/tshirt_samurai.png) no-repeat center top; */
+                /*background: url(../img/uneg_logo.png) no-repeat center center!important;*/
+                position: relative;
+                left: 0!important;
+                top: 0!important;
+                height: 100vh;
+                width: 100%;
+                text-align: center;
+                padding: 0px!important;
+                margin: 0px!important;
+            }
+
+
+            body{
+                margin: 0;
+                padding: 0;
+                background: #fff;
+
+                color: #fff;
+                font-family: monospace;
+                font-size: 12px;
+            }
+
+            .body{
+                position: absolute;
+                top: -0px;
+                left: -0px;
+                right: -0px;
+                bottom: -0px;
+                width: auto;
+                height: auto;
+                /*background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);*/
+                background-image: url('img/carview2.PNG');
+                background-size: cover;
+                -webkit-filter: blur(5px);
+                z-index: 0;
+            }
+
+            .grad{
+                position: absolute;
+                top: -0px;
+                left: -0px;
+                right: -0px;
+                bottom: -0px;
+                width: auto;
+                height: auto;
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+                z-index: 1;
+                opacity: 0.7;
+            }
+
+            .header{
+                /*position: absolute;
+                top: calc(50% - 35px);
+                left: calc(50% - 255px);*/
+                padding-top: 50%;
+                position: relative;
+                z-index: 2;
+            }
+
+            .header div{
+                /*float: left;*/
+                color: #fff;
+                font-family: monospace;
+                font-size: 35px;
+                font-weight: 200;
+            }
+
+            .header div span{
+                color: #5379fa !important;
+            }
+
+            .enter{
+                margin: auto;
+                text-align: center;
+                width: 50%;
+                z-index: 2;
+            }
+
+
+
+
+
+            .enter > p{
+                
+                /*background: #fff;*/
+                border: 1px solid #fff;
+                cursor: pointer;
+                border-radius: 2px;
+                color: #fff;
+                font-family: 'Exo', sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+                padding: 14px;
+            }
+
+
+            ::-webkit-input-placeholder{
+               color: rgba(255,255,255,0.6);
+            }
+
+            ::-moz-input-placeholder{
+               color: rgba(255,255,255,0.6);
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div class="app">
+            <div class="body"></div>
+            <div class="grad"></div>
+            <div class="header">
+                <img src="img/uneg.jpg" style="width: 40%;">
+
+                <div>Transport-<span>AR</span></div>
+
+                <div id="gotoapp-btn" class="enter">
+                    <p>Entrar</p>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <!-- <script type="text/javascript" src="ade.js"></script> -->
+
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
